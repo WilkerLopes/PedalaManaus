@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  @apply bg-primary-600 text-primary-50;
+}
+
+img,
+svg {
+  user-select: none;
+  pointer-events: none;
+}
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1440px;
+  @media (max-width: 1024px) {
+    width: 85%;
+  }
+  @media (max-width: 720px) {
+    width: calc(100% - 48px);
+  }
+}
